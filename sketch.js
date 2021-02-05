@@ -297,7 +297,6 @@ function draw(){
       warMusic.play();
     }
     if(score>=150){
-      lvl2.visible=true;
       warMusic.stop ();
       jungleMusic.play();
     }
@@ -305,12 +304,8 @@ function draw(){
       lvl2.visible=false;
     }
     if(score>=250){
-      lvl3.visible=true;
       jungleMusic.stop();
       horrorMusic.play();
-    }
-    if(score>=260){
-      lvl3.visible=false;
     }
   }
 
@@ -800,6 +795,13 @@ function Bg2(){
       spawnFires(); 
     }
   }
+    
+    if(score>=150){
+      lvl2.visible=true;
+    }
+    if(score>=160){
+      lvl2.visible=false;
+    }
 
   if(score>=200){
     var selectfire = Math.round(random(1,1));
@@ -888,6 +890,13 @@ function Bg3(){
     }
   }
 
+    if(score>=250){
+      lvl3.visible=true;
+    }
+     if(score>=260){
+      lvl3.visible=false;
+    }
+    
   if(score>=300){
     var ghost = Math.round(random(1,4));
   if (World.frameCount %100 == 0) {
